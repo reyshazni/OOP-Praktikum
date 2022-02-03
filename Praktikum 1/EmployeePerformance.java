@@ -61,7 +61,6 @@ public class EmployeePerformance {
      * @return total salary saat ini
      */
     public double getCurrentSalary() {
-        double bonus = getCurrentSalary();
-        return employee.baseSalary + (bonus*employee.baseSalary);
+        return employee.getBaseSalary() + (employee.getBaseSalary()*getSalaryBonusPercentage());
     }
 }
