@@ -1,11 +1,11 @@
 /**
  * Employee.java
  * [Jelaskan kegunaan class ini]
- * @author [NIM] [Nama]
+ * @author [18220013] [Muhammad Rey Shazni Helmi]
  */
 
 public class Employee {
-    private static int employeeCount;
+    private static int employeeCount = 0;
 
     private String name;
     private double baseSalary;
@@ -16,7 +16,8 @@ public class Employee {
      * @param baseSalary
      */
     public Employee(String name, double baseSalary) {
-
+        this.name = name;
+        this.baseSalary = baseSalary;
     }
 
     /**
@@ -24,7 +25,7 @@ public class Employee {
      * @param amount jumlah peningkatan, asumsi amount >= 0
      */
     public void increaseSalary(double amount) {
-
+        this.baseSalary += amount;
     }
 
     /**
@@ -32,7 +33,7 @@ public class Employee {
      * @return name
      */
     public String getName() {
-
+        return name;
     }
 
     /**
@@ -40,13 +41,13 @@ public class Employee {
      * @return baseSalary
      */
     public double getBaseSalary() {
-
+        return baseSalary;
     }
 
     /**
      * @return jumlah karyawan
      */
     public static int getEmployeeCount() {
-
+        return employeeCount;
     }
 }
