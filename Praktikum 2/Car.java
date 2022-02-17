@@ -26,13 +26,12 @@ public abstract class Car {
     
     public void increaseMileage(long increment) {
         // Meningkatkan nilai atribut mileage
-        this.mileage += increment;
+        mileage += increment;
     }
   
     public String toString() {
-        String newStr = String.format("Number of Wheels: %d, Mileage: &d", numberOfWheels, mileage);
         // Mengembalikan informasi mobil dengan format: "Number of Wheels: {numberOfWheels}, Mileage: {mileage}"
-        return newStr;
+        return String.format("Number of Wheels: %d, Mileage: %d", numberOfWheels, mileage);
     }
   
     public abstract long getPrice();
